@@ -1,0 +1,15 @@
+{
+  "name": "dourbest-fullstack",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"cd frontend && yarn dev\" \"cd server && yarn dev\"",
+    "build": "cd frontend && yarn build && cd ../server",
+    "start": "concurrently \"cd frontend && yarn preview\" \"cd server && yarn start\"",
+    "install:all": "cd frontend && yarn install && cd ../server && yarn install"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
